@@ -11,6 +11,8 @@ Docker Compose: https://docs.docker.com/compose/install/
 
 This starts the services in the background:
 ```
+$ git clone https://github.com/CounterStrafe/docker-adminafk.git
+$ cd docker-adminafk/
 $ docker-compose up -d
 ```
 
