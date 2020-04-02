@@ -14,6 +14,8 @@ services:
     expose:
       - 12360
       - 12361
+      - 12360/udp
+      - 12361/udp
     volumes:
       - /opt/docker/ebot/logs:/ebot/logs
       - /opt/docker/ebot/demos:/ebot/demos
@@ -76,7 +78,7 @@ services:
     command: mysqld --sql_mode="NO_ENGINE_SUBSTITUTION"
 
   adminafk:
-    image: lyonesport/adminafk:latest
+    image: counterstrafe/adminafk:1.8.0
     container_name: adminafk
     restart: always
     expose:
