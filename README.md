@@ -16,7 +16,7 @@ $ docker-compose up -d
 
 ## Usage
 
-eBot Ports: 12360 and 12361 for tcp/udp
+eBot Ports: 12360 and 12361 for tcp/udp  
 eBot Web Public Page: http://localhost/
 eBot Web Admin Page: http://localhost/admin.php
 AdminAFK Public Page: http://localhost/adminafk/
