@@ -11,13 +11,15 @@ Docker Compose: https://docs.docker.com/compose/install/
 
 This starts the services in the background:
 ```
+$ git clone https://github.com/CounterStrafe/docker-adminafk.git
+$ cd docker-adminafk/
 $ docker-compose up -d
 ```
 
 ## Usage
 
-eBot Ports: 12360 and 12361 for tcp/udp
-eBot Web Public Page: http://localhost/
-eBot Web Admin Page: http://localhost/admin.php
-AdminAFK Public Page: http://localhost/adminafk/
-AdminAFK Admin Page: http://localhost/adminafk/admin.php
+eBot Ports: 12360 and 12361 for tcp/udp  
+eBot Web Public Page: `http://localhost/`  
+eBot Web Admin Page: `http://localhost/admin.php`  
+AdminAFK Public Page: `http://localhost/adminafk/`  
+AdminAFK Admin Page: `http://localhost/adminafk/admin.php`
