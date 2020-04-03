@@ -97,12 +97,10 @@ services:
       ADMINAFK_PASSWORD_EBOT: 'ebotv3'
 
   adminafk-mysql:
-    image: mysql:5.7
+    image: counterstrafe/adminafk-mysql:1.8.0
     container_name: adminafk-mysql
     restart: always
     command: mysqld --user=root
-    volumes:
-      - ./adminafk.sql:/docker-entrypoint-initdb.d/adminafk.sql
     expose:
       - 3306
     environment:
