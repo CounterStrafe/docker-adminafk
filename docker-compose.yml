@@ -1,12 +1,21 @@
 version: "3.7"
 
 services:
-  haproxy:
-    image: "haproxy:2.1"
+  nginx:
+    image: "nginx:1.17-alpine"
     ports:
       - "80:80"
+      - "443:443"
     volumes:
-      - ./haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg
+      - ./data/nginx:/etc/nginx/conf.d
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
+
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
 
   ebot:
     image: hsfactory/ebot
@@ -45,7 +54,7 @@ services:
       - /opt/docker/ebot/demos:/opt/ebot/demos
       - /opt/docker/ebot/logs:/opt/ebot/logs
     environment:
-      EBOT_IP: 'ebot'
+      EBOT_IP: '0.0.0.0'
       EBOT_PORT: '12360'
       EBOT_ADMIN_USER: 'admin'
       EBOT_ADMIN_PASS: 'password'
