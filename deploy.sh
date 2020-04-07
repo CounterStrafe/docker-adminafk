@@ -6,7 +6,7 @@ sed -i "s|email=\"\"|email=\"test@test.com\"|" init-letsencrypt.sh
 ADMINAFK_PASSWORD_ADMINAFK=''
 ADMIN_PASSWORD_HASH=''
 
-#docker-compose up -d
+docker-compose up -d
 
-#docker exec adminafk-mysql /bin/change_password.sh $ADMINAFK_PASSWORD_ADMINAFK $ADMIN_PASSWORD_HASH
+docker exec adminafk-mysql /bin/change_password.sh $ADMINAFK_PASSWORD_ADMINAFK $ADMIN_PASSWORD_HASH
 
